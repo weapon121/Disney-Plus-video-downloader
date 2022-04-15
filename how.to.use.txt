@@ -8,45 +8,7 @@ https://datatofish.com/add-python-to-windows-path/
 
 3. Open dsnp.cfg with notepad and add your email and password
 
-4. In the script's folder three batches
-
-a. download.video.bat
-
-For downloading the video with the audio and subtitles use
-
-disneyplus.py --url https://www.disneyplus.com/es-es/series/loki/6pARMvILBGzF -s 1 -e 1 -q 720 --alang eng --slang eng --flang eng
-
-or use
-
-disneyplus.py --url https://www.disneyplus.com/es-es/series/loki/6pARMvILBGzF -s 1 -e 1 -q 720 
-
-and the script will download the video with all the available audio languages and subtitles.
-
-720p is the maximum resolution that could be decrypted using this script, you could use -q 720 or -q 480.
-
-Do not use --hevc, --hdr or --uhd, the script will not decrypt the videos.
-
-For downloading the video with the audio and subtitles for a season use
-
-disneyplus.py --url https://www.disneyplus.com/es-es/series/loki/6pARMvILBGzF -s 1 -e 1 --all-season -q 720 --alang eng --slang eng --flang eng
-
-For setting the default subtitle language use
-
-disneyplus.py --url https://www.disneyplus.com/es-es/series/loki/6pARMvILBGzF -s 1 -e 1 --default-sub-mux eng
-
-For setting the default audio language use
-
-disneyplus.py --url https://www.disneyplus.com/es-es/series/loki/6pARMvILBGzF -s 1 -e 1 --default-audio-mux eng
-
-The downloads will be saved in the folder "Downloads".
-
-For adding more options use the instructions in disneyplus.py, open the file with Notepad++.
-
-
-
-b. download.subtitles.bat
-
-For downloading only the subtitles use
+4. For downloading the subtitles in download.subtitles.bat use
 
 disneyplus.py --nv --na --keep --url https://www.disneyplus.com/es-es/series/loki/6pARMvILBGzF -s 1 -e 1 --slang eng --flang eng
 
@@ -58,34 +20,18 @@ disneyplus.py --nv --na --keep --url https://www.disneyplus.com/es-es/series/lok
 
 Language codes
 
-https://github.com/Essam3152/Disney-Plus-video-downloader/blob/main/pydisney/disneyplus_muxer.py#L105-L191
+https://github.com/Essam23/Disney-Plus-subtitles-downloader/blob/main/pydisney/disneyplus_muxer.py#L105-L190
 
 For downloading the subtitles of all the seasons use
 
 disneyplus.py --nv --na --all-season --keep --url https://www.disneyplus.com/es-es/series/the-mandalorian/3jLIGMDYINqD -s 1 -e 1 --slang eng --flang eng
 disneyplus.py --nv --na --all-season --keep --url https://www.disneyplus.com/es-es/series/the-mandalorian/3jLIGMDYINqD -s 2 -e 1 --slang eng --flang eng
 
-
-c. download.audio.bat
-
-For downloading only the audio use
-
-disneyplus.py --nv --ns --keep --url https://www.disneyplus.com/es-es/series/loki/6pARMvILBGzF -s 1 -e 1 --alang eng
-
-For downloading the audio in Atmos use
-
-disneyplus.py --nv --ns --keep --url https://www.disneyplus.com/es-es/series/loki/6pARMvILBGzF -s 1 -e 1 --alang eng --atmos
-
-For downloading the audio in 2 channels only use
-
-disneyplus.py --nv --ns --keep --url https://www.disneyplus.com/es-es/series/loki/6pARMvILBGzF -s 1 -e 1 --alang eng --only-2ch-audio
-
-
 Replace US in these lines with your country code, for example for France replace "region/US" with "region/FR".
 
-https://github.com/Essam3152/DSNP/blob/main/pydisney/disneyplus_api.py#L22-L26
+https://github.com/Essam23/Disney-Plus-subtitles-downloader/blob/main/pydisney/disneyplus_api.py#L22-L26
 
-If you changed the country IP using a VPN delete the file token.ini before starting to download the video, 
+If you changed the country IP using a VPN delete the file token.ini before starting to download the subtitles, 
 and change the country code in disneyplus_api.py.
 
 This script may not work with some TV shows.

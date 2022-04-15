@@ -1,1 +1,1 @@
-# Disney-Plus-video-downloader
+# Disney-Plus-subtitles-downloader
